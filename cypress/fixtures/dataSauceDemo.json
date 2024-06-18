@@ -1,0 +1,7 @@
+{
+    "Title": "Swag Labs",
+    "Login_page": "https://www.saucedemo.com/",
+    "Main_page": "https://www.saucedemo.com/inventory.html",
+    "Valid_user": "standard_user",
+    "Valid_password" : "secret_sauce"
+}
