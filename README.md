@@ -14,19 +14,20 @@ These tests automate scenarios that test login and logout functionality in the S
   - [Feature file](#feature-file)
   - [Step definitions](#step-definitions)
 - [Fixtures](#fixtures)
-- [Page objects](#page-objects)
 - [Common functions](#common-functions)
+- [Page objects](#page-objects)
+- [Commands](#commands)
 - [Contributions](#contributions)
 
 ## Installation
 
 1. Clone this repository to your local machine
    
-       git clone https://github.com/psrivera90/automationSauceDemo/
+       git clone https://github.com/psrivera90/automation-saucedemo/
 
 2. Navigate to the project folder
    
-       cd automationSauceDemo
+       cd automation-saucedemo
 
 3. Install the dependencies
    
@@ -86,24 +87,30 @@ The step definitions file _'loginAndLogout.js'_ is located in _'cypress/support/
 
 The fixture file _'dataSauceDemo.json'_ located in _'cypress/fixtures'_ contains certain data used in the tests.
 
+## Common functions
+
+The _'commonFunctions.js'_ file is located in _'cypress/functions'_ and contains reusable functions for testing.
+
 ## Page objects
 
 The Page Objects files are located in _'cypress/pages'_ and contain classes representing different pages of the application. These files encapsulate the page elements and related actions for better organization and maintainability.
 
-## Common functions
+## Commands
 
-The _commonFunctions.js_ file is located in _'cypress/functions'_ and contains reusable functions for testing.
+The custom comands are defined in the _'cypress/support/commands.js'_ file. These commands extend Cypress with reusable actions and can be used to simplify and standardize test scripts.
 
 ## Contributions
 
 Contributions are welcome! Please follow these steps to contribuite:
 
   1. Fork the repository
+     
   2. Create a new branch
      
          git checkout -b feature/your-feature
 
   3. Make your changes
+   
   4. Commit your changes
 
          git commit -m 'Add some feature'
