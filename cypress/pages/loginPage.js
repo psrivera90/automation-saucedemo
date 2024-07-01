@@ -12,13 +12,17 @@ class loginPage {
     }
 
     insertCredentials (username, password) {
-        if(username !== "") {
-            cy.get(this.selectors.usernameInput).clear().type(username)
-        }
+        const credentials = [
+            { input: this.selectors.usernameInput, value: username },
+            { input: this.selectors.passwordInput, value: password }
+        ]
 
-        if(password !== "") {
-            cy.get(this.selectors.passwordInput).clear().type(password)
-        }
+        credentials.forEach(({ input, value }) => {
+            cy.get(input).clear()
+            if (value !== "") {
+                cy.get(input).type(value, { force: true})
+            }
+        })
     }
 
     checkErrorMessage(error) {
